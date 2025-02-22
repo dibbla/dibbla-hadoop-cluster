@@ -12,6 +12,8 @@ services:
           ENSURE_NAMENODE_DIR: "/tmp/hadoop-root/dfs/name"
       networks:
         - hadoop_network
+      volumes:
+        - ./pagerank:/pagerank
 
    datanode:
       image: apache/hadoop:3.3.5
